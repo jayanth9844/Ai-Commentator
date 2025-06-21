@@ -18,8 +18,3 @@ venv/
 .idea/
 .vscode/
 
-# Ignore only the root-level large files (safe to track subfolder copies)
-chess_commentary_cleaned_combined.json
-GPT_Model.ipynb
-gpt_weight_download.py
-/trained_model.pth
