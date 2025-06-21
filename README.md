@@ -98,4 +98,24 @@ flowchart TD
   F --> G
   F --> I
   G --> H
+```
+## 📦 How to Run the Project
 
+### 🗂️ Download Instructions
+
+To get started quickly:
+
+👉 **Download only the `game_folder/`** from the repository:  
+🔗 [github.com/jayanth9844/Ai-Commentator](https://github.com/jayanth9844/Ai-Commentator)
+
+### 🚀 Run the Application
+
+Once you've downloaded the folder:
+
+```bash
+# Step into the game folder
+cd game_folder
+
+# Run the interface
+python interface_buil.py
+```
