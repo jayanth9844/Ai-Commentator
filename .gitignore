@@ -1,0 +1,25 @@
+# Python cache and temp files
+__pycache__/
+*.log
+*.tmp
+*.pyc
+
+# System-specific hidden files
+.DS_Store
+
+# Environment files and virtual environments
+.env
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.idea/
+.vscode/
+
+# Ignore only the root-level large files (safe to track subfolder copies)
+chess_commentary_cleaned_combined.json
+GPT_Model.ipynb
+gpt_weight_download.py
+/trained_model.pth
