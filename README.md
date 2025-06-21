@@ -33,8 +33,6 @@ _(Replace `#` with your YouTube or Drive link)_
 </tr>
 </table>
 
-> ℹ️ Replace the image paths with your actual file URLs.
-
 ---
 
 ## 🔍 Problem Statement
@@ -54,7 +52,6 @@ While expert chess engines provide high-quality evaluations, they lack the clari
 - 🔊 Offline **Text-to-Speech** via `pyttsx3`
 - 📦 Fully **modular & offline-compatible** (no internet needed)
 - 🎮 Interactive GUI built with **Pygame**
-- ♿ Accessibility support for **visually impaired users**
 
 ---
 
@@ -74,30 +71,32 @@ While expert chess engines provide high-quality evaluations, they lack the clari
 ## 📐 System Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
+  subgraph GUI [User Interface]
+    A[Pygame Chess Board]
+    I[Display Commentary and Evaluation]
+  end
 
-subgraph UI [User Interface]
-    U1[Pygame\nChess Board]
-    U2[Display Commentary\n& Evaluation]
-end
+  subgraph Engine [Analysis and Generation]
+    B[Board State using python-chess]
+    C[Stockfish 16 Engine Analysis]
+    D[Formatted Analysis String]
+    E[GPT-2 Medium - 355M Parameters]
+    F[Generated Commentary]
+  end
 
-subgraph AG [Analysis & Generation]
-    A1[Board State\n(python-chess)]
-    A2[Stockfish 16\nAnalysis]
-    A3[Formatted\nAnalysis String]
-    A4[GPT-2 Medium\n(355M Parameters)]
-    A5[Generated\nCommentary]
-end
+  subgraph Output [Output]
+    G[pyttsx3 Text-to-Speech]
+    H[Audio Commentary]
+  end
 
-subgraph OUT [Output]
-    O1[pyttsx3\nText-to-Speech]
-    O2[Audio\nCommentary]
-end
-
-U1 --> A1
-A1 --> A2 --> A3 --> A4 --> A5
-A5 --> O1 --> O2
-A5 --> U2
-A2 --> U2
-
+  A --> B
+  B --> C
+  C --> D
+  C --> I
+  D --> E
+  E --> F
+  F --> G
+  F --> I
+  G --> H
 
