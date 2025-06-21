@@ -25,11 +25,11 @@ _(Replace `#` with your YouTube or Drive link)_
 
 <table>
 <tr>
-<td align="center"><strong>System Architecture</strong><br><img src="path/to/system_architecture.png" width="500"/></td>
-<td align="center"><strong>Model Loss Curve</strong><br><img src="path/to/loss_curve.png" width="500"/></td>
+<td align="center"><strong>System Architecture</strong><br><img src="images/System Architecture.png" width="500"/></td>
+<td align="center"><strong>Model Loss Curve</strong><br><img src="images/Model Loss Curve.jpg" width="500"/></td>
 </tr>
 <tr>
-<td align="center"><strong>GUI Interface with Commentary</strong><br><img src="path/to/gui_screenshot.png" width="500"/></td>
+<td align="center"><strong>GUI Interface with Commentary</strong><br><img src="images/GUI Interface with Commentary.png" width="500"/></td>
 </tr>
 </table>
 
