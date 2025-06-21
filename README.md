@@ -54,7 +54,7 @@ _(Replace `#` with your YouTube or Drive link)_
 |---------------------------|-------------------------------------|
 | Chess Engine              | [Stockfish 16](https://stockfishchess.org) |
 | GUI & Game Logic          | `pygame`, `python-chess`            |
-| NLP Model                 | `GPT-2` (via Hugging Face Transformers) |
+| NLP Model                 | [GPT-2](https://openaipublic.blob.core.windows.net/gpt-2/models) |
 | Feature Extraction        | Custom pipeline on FEN strings      |
 | TTS (Speech)              | `pyttsx3` (offline)                 |
 | Data Source               | [Lichess.org](https://lichess.org/) |
