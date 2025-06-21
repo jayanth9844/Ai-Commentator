@@ -37,6 +37,16 @@ _(Replace `#` with your YouTube or Drive link)_
 
 ---
 
+## 🔍 Problem Statement
+
+While expert chess engines provide high-quality evaluations, they lack the clarity and accessibility required by beginners or casual users. Most tools also require online access. This system addresses that gap by providing:
+
+- 🧠 Natural language explanations for every move  
+- 🔌 Offline functionality for resource-constrained environments  
+- 📚 An immersive and educational gameplay experience  
+
+---
+
 ## 🚀 Features
 
 - 🧠 Real-time move evaluation using **Stockfish 16**
@@ -64,10 +74,30 @@ _(Replace `#` with your YouTube or Drive link)_
 ## 📐 System Architecture
 
 ```mermaid
-graph TD;
-    A[User Move on GUI] --> B[python-chess]
-    B --> C[Stockfish 16 Evaluation]
-    C --> D[Feature Extraction + Formatted String]
-    D --> E[Fine-tuned GPT-2]
-    E --> F1[On-screen Commentary]
-    E --> F2[pyttsx3 Speech Output]
+flowchart LR
+
+subgraph UI [User Interface]
+    U1[Pygame\nChess Board]
+    U2[Display Commentary\n& Evaluation]
+end
+
+subgraph AG [Analysis & Generation]
+    A1[Board State\n(python-chess)]
+    A2[Stockfish 16\nAnalysis]
+    A3[Formatted\nAnalysis String]
+    A4[GPT-2 Medium\n(355M Parameters)]
+    A5[Generated\nCommentary]
+end
+
+subgraph OUT [Output]
+    O1[pyttsx3\nText-to-Speech]
+    O2[Audio\nCommentary]
+end
+
+U1 --> A1
+A1 --> A2 --> A3 --> A4 --> A5
+A5 --> O1 --> O2
+A5 --> U2
+A2 --> U2
+
+
