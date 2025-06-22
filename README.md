@@ -15,7 +15,7 @@
 ---
 
 ## 📽️ Demo Video
-
+(click here to view 👉)
 [![Watch the demo](https://img.youtube.com/vi/VDpL0ZqGGKA/0.jpg)](https://www.youtube.com/watch?v=VDpL0ZqGGKA)
 
 ---
